@@ -8,9 +8,11 @@
   <!-- Botão para adicionar -->
   <button (click)="addItem()">Adicionar</button>
 
-  <!-- Lista de itens -->
+  <!-- Lista de itens com botão de remover -->
   <ul>
-    <li *ngFor="let item of items">{{ item }}</li>
+    <li *ngFor="let item of items; let i = index">
+      {{ item }}
+      <button (click)="removeItem(i)">Remover</button>
+    </li>
   </ul>
 </div>
-

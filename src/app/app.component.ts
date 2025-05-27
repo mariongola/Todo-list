@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // <-- IMPORTANTE
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, FormsModule], // <-- IMPORTA FormsModule aqui também
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public items = ['item 1', 'item 2', 'item 3', 'item 4'];
+  public items = ['item 1', 'item 2', 'item 3'];
   public newItem: string = '';
 
   addItem() {
@@ -18,5 +18,9 @@ export class AppComponent {
       this.items.push(this.newItem);
       this.newItem = '';
     }
+  }
+
+  removeItem(index: number) {
+    this.items.splice(index, 1);
   }
 }
