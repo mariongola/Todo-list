@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public items = ['item 1', 'item 2', 'item 3'];
+  public items = ["item 1", "item 2", "item 3"];
   public newItem: string = '';
 
   addItem() {
